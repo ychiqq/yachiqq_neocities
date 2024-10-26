@@ -1,0 +1,306 @@
+html {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+html::-webkit-scrollbar { /* WebKit */
+  width: 0;
+  height: 0;
+}
+
+@font-face {
+  font-family: Miracode;
+  src:  url('../fonts/Miracode/Miracode.eot'),
+        url('../fonts/Miracode/Miracode.ttf') format('truetype'),
+        url('../fonts/Miracode/Miracode.woff') format('woff');
+}
+
+@font-face {
+  font-family: Cloick;
+  src:  url('../fonts/Cloick/CLOICK.otf') format("opentype"),
+        url('../fonts/Cloick/Cloick.ttf') format("truetype"),
+        url('../fonts/Cloick/Cloick.woff') format("woff");
+}
+
+body {
+  background-color: white;
+  position: relative;
+  color: black;
+  font-family: Verdana;
+  background-image: url(https://64.media.tumblr.com/6beb87be611be2c9ae13adea98cc37b4/7cf915f60095705b-cd/s75x75_c1/0c1f522b13c9d503f8339773784b417b70d8989b.gifv);
+}
+
+p {
+  font-family: "Miracode";
+  font-size: small;
+}
+div.box {
+  width: auto;
+
+  border: 8px solid rgb(255, 165, 192);
+  border-radius: 20px;
+  height: 50em;
+  max-width: 80em;
+  background-color: #fdc4d7;
+  box-shadow: 0px 0px 35px 20px rgba(255, 255, 255, 0.678);
+  margin: auto;
+  margin-top: 100px;
+}
+
+div.profile {
+  color: aquamarine;
+  border-right: 8px solid rgb(255, 165, 192);
+  height: calc(100% - 40px);
+  width: 15%;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  padding: 3px;
+}
+
+div.header {
+  border-bottom: 8px solid rgb(255, 165, 192);
+  float: top;
+  padding: 5px;
+  background-image: linear-gradient(rgb(255,165,192), rgba(255, 255, 255, 0.596));
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+#pfp {
+  border-radius: 50%;
+  background-color: #fff;
+  margin-top: 1em;
+
+}
+
+#pfpdiv {
+  align-self: center;
+}
+
+@keyframes enter {
+  0% {bottom: 0px;}
+  50% {bottom: 30px;}
+  100% {bottom: 0px;}
+
+}
+
+div.imgenter {
+max-width: 100%;
+animation-name: enter;
+animation-duration: 2s;
+position: relative;
+margin-left: 7%;
+animation-iteration-count: infinite;
+animation-timing-function: ease-in-out;
+
+}
+div.center {
+  margin: auto;
+  width: 50%;
+}
+
+a.buttonenter {
+  border-radius: 3px;
+  color: #000000;
+  background-image: linear-gradient(#ff63d0,#ca349d,#bfa9d1);
+  text-align: center;
+  margin: auto;
+  width: 10%;
+  padding: 5px;
+  font-variant: small-caps;
+  padding-right: 13px;
+  display: block;
+  box-shadow: 0PX 0PX 15PX #bfa9d1;
+  font-family: audiowide;
+  font-weight: 1000;
+}
+a.buttonenter:hover {
+  background-image: linear-gradient(#ffb8ea,#c569a9,#d2c8da);
+  color: #c0e3ff;
+}
+
+
+
+a.button {
+  background-color: #bdb6ff;
+  border-radius: 6px;
+  border: 2px solid rgb(106, 115, 248); 
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  padding: 3px;
+  display: block;
+  font-size: small;
+  max-width: fit-content;
+}
+
+a.button:hover {
+  background-color: #1989f1;
+  border: 2px solid #c7e4ff;
+  color: #c0e3ff;
+}
+
+.portfolio {
+  display: none;
+}
+
+div#portbox {
+  /* border: 4px rgb(238, 111, 164) inset; */
+  border-radius: 80px 80px 0px 0px;
+  height: auto;
+  background-image: linear-gradient(#ffb4da,#c0ebff);
+  box-shadow: 0px 0px 30px 0px rgba(255, 104, 197, 0.801);
+  margin: auto;
+  margin-top: 10px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 20%;
+  backdrop-filter: blur(2px);
+  /* left: 50%;
+  transform: translateX(-50%); */
+  flex-direction: column;
+  padding: 4% 4% 1% 4%;
+  /* z-index: -2; */
+}
+
+div#portboxholder {
+  /* border: 4px rgb(238, 111, 164) inset; */
+  border-radius: 20px;
+  /* height: 12vh; */
+  background-image: linear-gradient(#ff76bb 10%,  #ffffff00, #ffffff00);
+  box-shadow: 0px 0px 30px 0px rgba(255, 104, 197, 0.801);
+  margin: auto;
+  margin-top: 20px;
+  width: 70vw;
+  /* height: 20vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 2vh;
+  /* left: 50%;
+  transform: translateX(-50%); */
+  flex-direction: column;
+  backdrop-filter: blur(2px);
+  padding: 1 0% 1% 1%;
+  /* z-index: -2; */
+  padding-top: 20px;
+}
+
+/* div#menuSelect {
+  display: flex;
+} */
+
+div#buttons {
+  display: flex;
+  flex-direction: row;
+  z-index: 6;
+  justify-content: center;
+  height: auto;
+  width: 50vw;
+  align-items: baseline;
+  align-content: center;
+  
+  /* border-style: dotted; for debugging */
+}
+
+button.folioSelect {
+  display: flex;
+  border-radius: 3px;
+  color: #000000;
+  border: 1px solid #a72a64;
+  background-image: linear-gradient(#ff63d0,#ca349d,#bfa9d1);
+  text-align: center;
+  margin: auto;
+  width: 5vh;
+  /* padding: .5px; */
+  font-variant: small-caps;
+  /* padding-right: 13px; */
+  /* display: block; */
+  /* box-shadow: 0PX 0PX 15PX #bfa9d1; */
+  font-family: Cloick;
+  /* font-weight: 1000; */
+  justify-content: center;
+  font-size: 1vw;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-top: .5vh;
+  flex: 1 1 1vw;
+  min-height: 25px;
+  max-height: 50px;
+  z-index: 10;
+  /* margin-top: 20px; */
+
+}
+button.folioSelect:hover {
+  background-image: linear-gradient(#ffb8ea,#c569a9,#d2c8da);
+  color: #c0e3ff;
+}
+button.folioSelect:active {
+  background-image: linear-gradient(#ffb8ea,#a1578b,#a69eac);
+  color: #FFFFFF;
+}
+
+#spacer {
+  width: 50px;
+  flex-grow: 1.5;
+  margin-left: 5px;
+}
+#spacer2 {
+  width: 1px;
+  padding: 0;
+  padding-top: 10px;
+  margin-right: 5px;
+  flex-grow: .2;
+}
+
+p.foliodescr {
+  text-align: right;
+}
+.foliotext {
+  text-align: left;
+}
+
+.divider {
+  padding-bottom: 20px;
+}
+
+button#homepageLink {
+  align-items: left;
+  /* padding-top: 5px; */
+  /* flex: 2; */
+  /* margin-bottom: 5px; */
+  /* z-index: 3;  */
+}
+
+img.folioImage {
+  padding-bottom: 5px;
+}
+h1#title {
+  align-self: auto;
+  text-align: center;
+  margin-top: 0px;
+  transform: translateY(130px);
+  z-index: 1;
+  position: relative;
+  font-family: 'Cloick';
+  /* z-index: auto; */
+  color: rgb(255, 255, 255);
+  font-size: 102px;
+  padding: 0px;
+}
+/* 
+div#title {
+  z-index: 3;
+} */
