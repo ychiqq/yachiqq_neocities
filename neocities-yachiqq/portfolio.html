@@ -3,37 +3,17 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.00, minimum-scale=0.75">
-    <title>The web site of yachiqq</title>
-    <!-- The style.css file allows you to change the look of your web pages.
-         If you include the next line in all your web pages, they will all share the same look.
-         This makes it easier to make new pages for your site. -->
+    <title>yachiqq portfolio!</title>
     <link href="styles/style.css" rel="stylesheet" type="text/css" media="all">
-    <script>
-      function openFolio(folioName) {
-        var i;
-        var x = document.getElementsByClassName("portfolio");
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
-          console.debug(x[i])  ;
-        }
-        document.getElementById(folioName).style.flexDirection = "column";
-        
-        document.getElementById(folioName).style.display = "flex"; 
-        console.debug(document.getElementById(folioName).style.display);
-        document.getElementById("buttons").style.paddingBottom =  '10px';
-        document.getElementById("title").textContent = folioName + '!';
-        
-      }
-      </script>
+    <link href="img/gif/pfp1.gif" rel="icon" type="img/gif">
+    <script type="text/javascript" src="scripts/open_folio.js"></script>
   </head>
   <body>
-    <!-- <div id="title"> -->
-    
-    <!-- </div> -->
-    <h1 id="title">MEDIA!</h1>
+    <div id="titleDiv">
+      <h1 id="title">MEDIA!</h1>
+    </div>
     <div id="portboxholder">
     <div id="portbox">
-      <!-- <h1 id="title">MEDIA</h1> -->
         <div id="buttons">
           <button class="folioSelect" id="homepageLink" onclick="location.href='/index.html'">home</button>
           <button class="folioSelect" id="spacer"></button>
@@ -47,9 +27,6 @@
       
       <div class="portfolioHolder">
         <div class="portfolio" id="Digital">
-          <!-- ////ADD BELOW///  -->
-
-
             <img class="folioImage" src="img/digital/IMG_0719.png" alt="placeholder">
             <p class="foliodescr">
               <i>Dick Boy</i> <br>
@@ -78,8 +55,6 @@
         
         </div>
         <div class="portfolio" id="Printmaking">
-          <!-- ////ADD BELOW///  -->
-
             <img class="folioImage" src="img/prints/eva.jpg" alt="placeholder">             
               <p class="foliodescr">
                 <i>atone</i> <br>
@@ -157,8 +132,6 @@
             </p>
         </div>
         <div class="portfolio" id="Photography">
-          <!-- ////ADD BELOW///  -->
-
           <div id="photoset1">
             <img class="folioImage" src="img/photos/12IMG_9528.jpg" alt="placeholder">
             
@@ -193,23 +166,15 @@
 
         </div>
         <div class="portfolio" id="Sculptures">
-          <!-- ////ADD BELOW///  -->
-
           <div id="sculpture1">
             <img class="folioImage" src="img/sculpture/dickboy.jpg" alt="placeholder">
             <p class="foliodescr">
               <i>sad girl</i> <br>
               air dry clay
             </p>
-            <!-- <p class="foliotext">
-              this artwork blah blah blah
-            </p> -->
           </div>
         </div>
         <div class="portfolio" id="Traditional">
-          <!-- ////ADD BELOW///  -->
-          
-
             <img class="folioImage" src="IMG/trad/ink1.jpg" alt="placeholder">
             <p class="foliodescr">
             16.5" x 23.4" (42cm x 59.4cm) <br>
