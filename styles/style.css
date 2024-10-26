@@ -27,7 +27,7 @@ body {
   position: relative;
   color: black;
   font-family: Miracode;
-  background-image: url(https://64.media.tumblr.com/6beb87be611be2c9ae13adea98cc37b4/7cf915f60095705b-cd/s75x75_c1/0c1f522b13c9d503f8339773784b417b70d8989b.gifv);
+  background-image: url("/img/bg.webp");
 }
 
 p {

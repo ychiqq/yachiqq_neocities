@@ -11,7 +11,8 @@
     box-sizing: border-box;
 }
 
-/* responsive design columns */
+/*  responsive design columns 
+    mobile-first             */
 [class*="col-"] {
     float: left;
     padding: 15px;
@@ -36,17 +37,30 @@ button.folioSelect {
 
 img.folioImage {
     width: 100%;
-    /* margin: auto; */
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 900px) {
     /* tablet view */
     button.folioSelect {width: 33%;}
     #title {font-size: 72px;
         transform: translateY(-40px);}
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25% ;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    /* changed to make the portbox bigger reactively */
+    .portboxHolder, .col-6 {width: 80%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1800px) {
     /* pc view */
     /* the !important overrides any other class defs */
     .col-1 {width: 8.33% !important;}
@@ -77,8 +91,19 @@ img.folioImage {
 
 html {
     font-family: Miracode;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
 }
 
+html::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+  }
+
+body {
+    background-image: url("/img/bg.webp");
+}
 .header {
     display: flex;
     color: black;
@@ -117,6 +142,7 @@ button.folioSelect:hover {
 }
 .portfolio {
     display: none;
+    flex-direction: column;
 }
 
 

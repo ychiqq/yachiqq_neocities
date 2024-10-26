@@ -1,15 +1,28 @@
 function openFolio(folioName) {
     var i;
     var x = document.getElementsByClassName("portfolio");
+    var folio = document.getElementById(folioName);
+    var wasShowing = folio.style.display;
+
     for (i = 0; i < x.length; i++) {
       x[i].style.display = "none";
-      console.debug(x[i])  ;
+      // console.debug(x[i]);
     }
-    document.getElementById(folioName).style.flexDirection = "column";
+
+    var folio = document.getElementById(folioName);
+    // folio.style.flexDirection = "column";
+    console.log(wasShowing);
+
+    if (wasShowing == "grid") {
+      folio.style.display = "none";
+      document.getElementById("title").textContent = 'portfolio';
+      // console.log('hide!')
+    } else {
+      folio.style.display = "grid";
+      // console.log(titleText);
+      document.getElementById("title").textContent = folioName + '!';
+    }
     
-    document.getElementById(folioName).style.display = "flex"; 
-    console.debug(document.getElementById(folioName).style.display);
-    document.getElementById("buttons").style.paddingBottom =  '10px';
-    document.getElementById("title").textContent = folioName + '!';
+    
     
 }

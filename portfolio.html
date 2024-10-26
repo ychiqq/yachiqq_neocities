@@ -1,233 +1,302 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.00, minimum-scale=0.75">
-    <title>yachiqq portfolio!</title>
-    <link href="styles/style.css" rel="stylesheet" type="text/css" media="all">
-    <link href="img/gif/pfp1.gif" rel="icon" type="img/gif">
-    <script type="text/javascript" src="scripts/open_folio.js"></script>
-  </head>
-  <body>
-    <div id="titleDiv">
-      <h1 id="title">MEDIA!</h1>
-    </div>
-    <div id="portboxholder">
-    <div id="portbox">
-        <div id="buttons">
-          <button class="folioSelect" id="homepageLink" onclick="location.href='/index.html'">home</button>
-          <button class="folioSelect" id="spacer"></button>
-          <button class="folioSelect" id="spacer2"></button> 
-          <button class="folioSelect" id="digitalSelect" onclick="openFolio('Digital')">digital</button>
-          <button class="folioSelect" id="canvasSelect" onclick="openFolio('Printmaking')">prints</button>
-          <button class="folioSelect" id="photoSelect" onclick="openFolio('Photography')">photos</button>
-          <button class="folioSelect" id="sculptureSelect" onclick="openFolio('Sculptures')">sculptures</button>
-          <button class="folioSelect" id="tradSelect" onclick="openFolio('Traditional')">traditional</button>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles/new_style.css" rel="stylesheet" type="text/css" media="all">
+        <link href="img/gif/pfp1.gif" rel="icon" type="img/gif">
+        <script type="text/javascript" src="scripts/open_folio.js"></script>
+        <title>new yachiqq portfolio</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1 id="title">portfolio</h1>
         </div>
-      
-      <div class="portfolioHolder">
-        <div class="portfolio" id="Digital">
-            <img class="folioImage" src="img/digital/IMG_0719.png" alt="placeholder">
-            <p class="foliodescr">
-              <i>Dick Boy</i> <br>
-            </p>
- 
-            <div class="divider">
-            <img src="img/gif/divider2.webp">
+        <div class="row portboxHolder col-6">
+        <!-- buttons to select which part of folio to view 
+                these change based on screen width -->
+            <div class="row folioSelect">
+                <button class="folioSelect col-2" id="homepageLink" onclick="location.href='/index.html'">home</button>
+                <button class="folioSelect col-2" id="digitalSelect" onclick="openFolio('digital')">digital</button>
+                <button class="folioSelect col-2" id="canvasSelect" onclick="openFolio('printmaking')">prints</button>
+                <button class="folioSelect col-2" id="photoSelect" onclick="openFolio('photography')">photos</button>
+                <button class="folioSelect col-2" id="sculptureSelect" onclick="openFolio('sculptures')">sculptures</button>
+                <button class="folioSelect col-2" id="tradSelect" onclick="openFolio('traditional')">traditional</button>
             </div>
+            <div class="portbox">
+                <div class="portfolio" id="digital">
+                    <!-- first digital image -->
+                    <div class="row">
+                        <div class="col-1" id="spacer"></div>
+                        <img class="folioImage col-10" src="img/digital/IMG_0719.png" alt="placeholder">
+                        <div class="col-1" id="spacer"></div>
+                    </div>
 
-            <img class="folioImage" src="img/digital/sporks.png" alt="An album cover, depicting a metal-alien race consumed by their love of sporks.">
-            <p class="foliodescr">
-              <i>Sporks</i> <br>
-            </p>
-            <p class="foliotext">
-              commissioned album cover 44 naarm-based artist <i>sporks</i>.
-            </p>
-
-            <div class="divider">
-            <img src="img/gif/divider2.webp">
-            </div>
-
-            <img class="folioImage" src="img/digital/steppenwolf.png" alt="Steppenwolf">
-            <p class="foliodescr">
-              <i>steppenwolf</i> <br>
-            </p>
+                    <p class="foliodescr col-12">
+                    <i>Dick Boy</i> <br>
+                    </p>
         
-        </div>
-        <div class="portfolio" id="Printmaking">
-            <img class="folioImage" src="img/prints/eva.jpg" alt="placeholder">             
-              <p class="foliodescr">
-                <i>atone</i> <br>
-                drypoint
-              </p>
+                    <img class="divider" src="img/gif/divider2.webp">
+                    
+                    <!-- second digital image -->
+                    <div class="row">
+                    <div class="col-1" id="spacer"></div>
+                    <img class="folioImage col-10" src="img/digital/sporks.png" alt="An album cover, depicting a metal-alien race consumed by their love of sporks.">
+                    <div class="col-1" id="spacer"></div>
+                    </div>
 
-            <div class="divider">
-            <img src="img/gif/divider2.webp">
-            </div>
-
-            <img class="folioImage" src="img/prints/PXL_20240626_060020369.jpg" alt="placeholder">
-            <p class="foliodescr">
-              <i>action</i> <br>
-              monoprint
-            </p>
-
-            <div class="divider">
-              <img src="img/gif/divider2.webp">
-            </div>
-
-              <img class="folioImage" src="img/prints/eva2.jpg" alt="placeholder">
-              <p class="foliodescr">
-                <i>eye on her</i> <br>
-                lino
-              </p>
-
-              <div class="divider">
-                <img src="img/gif/divider2.webp">
-              </div>
-
-            <img class="folioImage" src="img/prints/PXL_20240627_002538009.jpg" alt="placeholder">
-            <p class="foliodescr">
-              <i>heavenly</i> <br>
-              monoprint
-            </p>
-
-            <div class="divider">
-              <img src="img/gif/divider2.webp">
-            </div>
-
-            <img class="folioImage" src="img/prints/PXL_20240627_002518676.jpg" alt="placeholder">
-            <p class="foliodescr">
-              <i>shapez</i> <br>
-              relief print
-            </p>
-
-            <div class="divider">
-              <img src="img/gif/divider2.webp">
-            </div>
-
-            <img class="folioImage" src="img/prints/PXL_20240627_030321031.jpg" alt="placeholder">
-            <p class="foliodescr">
-              <i>ornate lady</i> <br>
-              lino
-            </p>
-
-            <div class="divider">
-              <img src="img/gif/divider2.webp">
-            </div>
-
-            <img class="folioImage" src="img/prints/PXL_20240627_002505385.jpg" alt="placeholder">
-            <p class="foliodescr">
-              <i>heavenly side b</i> <br>
-              monoprint, spirit transfer 
-              </p>
-          <div class="divider">
-            <img src="img/gif/divider2.webp">
-          </div>
-
-            <img class="folioImage" src="img/prints/angel.jpg" alt="placeholder">
-            <p class="foliodescr">
-              4" x 6" (10cm x 15cm) <br>
-              <i>angel</i> <br>
-              drypoint
-            </p>
-        </div>
-        <div class="portfolio" id="Photography">
-          <div id="photoset1">
-            <img class="folioImage" src="img/photos/12IMG_9528.jpg" alt="placeholder">
-            
-            <img class="folioImage" src="img/photos/11IMG_9419.jpg" alt="placeholder">
-            
-            <img class="folioImage" src="img/photos/10IMG_9505.jpg" alt="placeholder">
+                    <p class="foliodescr col-12">
+                    <i>Sporks</i> <br>
+                    </p>
+                    <p class="foliotext col-12">
+                    commissioned album cover 44 naarm-based artist <i>sporks</i>.
+                    </p>
         
-            <img class="folioImage" src="img/photos/9MG_9370.jpg" alt="placeholder">
+                    <img class="divider" src="img/gif/divider2.webp">
+                    
+                    <!-- third digital image -->
+                    <div class="row">
+                    <div class="col-1" id="spacer"></div>
+                    <img class="folioImage col-10" src="img/digital/steppenwolf.png" alt="Steppenwolf">
+                    <div class="col-1" id="spacer"></div>
+                    </div>
+                    
+                    <p class="foliodescr col-12">
+                    <i>steppenwolf</i> <br>
+                    </p>
+                </div>
+                <div class="portfolio" id="printmaking">
+                    <!-- first print image -->
+                    <div class="row">
+                        <div class="col-1" id="spacer"></div>
+                            <img class="folioImage col-10" src="img/prints/eva.jpg" alt="placeholder">  
+                        <div class="col-1" id="spacer"></div>
+                    </div>
+                    <p class="foliodescr">
+                    <i>atone</i> <br>
+                    drypoint
+                    </p>
         
-            <img class="folioImage" src="img/photos/8IMG_9508.jpg" alt="placeholder">
-            
-            <img class="folioImage" src="img/photos/7IMG_9473.jpg" alt="placeholder">
-          
-            <img class="folioImage" src="img/photos/6IMG_9423.jpg" alt="placeholder">
-          
-            <img class="folioImage" src="img/photos/5IMG_9465.jpg" alt="placeholder">
-          
-            <img class="folioImage" src="img/photos/4IMG_9365.jpg" alt="placeholder">
-          
-            <img class="folioImage" src="img/photos/3IMG_9489.jpg" alt="placeholder">
+                    <img class="divider" src="img/gif/divider2.webp">
+                    
+                    <!-- second print image -->
+                    <div class="row">
+                        <div class="col-1" id="spacer"></div>
+                            <img class="folioImage col-10" src="img/prints/PXL_20240626_060020369.jpg" alt="placeholder">
+                        <div class="col-1" id="spacer"></div>
+                    </div>
+                    
+                    <p class="foliodescr">
+                    <i>action</i> <br>
+                    monoprint
+                    </p>
         
-            <img class="folioImage" src="img/photos/2IMG_9431.jpg" alt="placeholder">
-          
-            <img class="folioImage" src="img\photos\1IMG_9511.jpg" alt="placeholder">
-            <p class="foliodescr">
-              <i>test set 1</i> <br>
-            </p>
-            <p class="foliotext">
-              destruction? or smth?????
-            </p>
-          </div>
-
-        </div>
-        <div class="portfolio" id="Sculptures">
-          <div id="sculpture1">
-            <img class="folioImage" src="img/sculpture/dickboy.jpg" alt="placeholder">
-            <p class="foliodescr">
-              <i>sad girl</i> <br>
-              air dry clay
-            </p>
-          </div>
-        </div>
-        <div class="portfolio" id="Traditional">
-            <img class="folioImage" src="IMG/trad/ink1.jpg" alt="placeholder">
-            <p class="foliodescr">
-            16.5" x 23.4" (42cm x 59.4cm) <br>
-              <i>lying</i> <br>
-              ink on pre-wetted paper
-            </p>
-            
-            <div class="divider">
-              <img src="img/gif/divider2.webp">
-            </div>
-
-            <img class="folioImage" src="img/trad/ink2.jpg" alt="placeholder">
-            <img class="folioImage" src="img/trad/ink3.jpg" alt="placeholder">
-            <p class="foliodescr">
-              16.5" x 23.4" (42cm x 59.4cm) <br>
-              <i>figures!</i> <br>
-              ink on pre-wetted paper, posca, oil pastel
-            </p>
-
-            <div class="divider">
-              <img src="img/gif/divider2.webp">
-            </div>
-
-            <img class="folioImage" src="img/trad/CCF_001.jpg" alt="placeholder">
-
-            <img class="folioImage" src="img/trad/CCF_002.jpg" alt="placeholder">
-
-            <img class="folioImage" src="img/trad/CCF_003.jpg" alt="placeholder">
-
-            <img class="folioImage" src="img/trad/CCF_004.jpg" alt="placeholder">
-
-            <img class="folioImage" src="img/trad/CCF_005.jpg" alt="placeholder">
-
-            <img class="folioImage" src="img/trad/CCF_006.jpg" alt="placeholder">
-
-            <img class="folioImage" src="img/trad/CCF_007.jpg" alt="placeholder">
-
-            <img class="folioImage" src="img/trad/CCF_008.jpg" alt="placeholder">
-
-            <img class="folioImage" src="img/trad/CCF_009.jpg" alt="placeholder">
-
-            <p class="foliodescr">
-              12" x 8.5" (21cm x 29.5cm) <br>
-              <i>sketchbook dump</i> <br>
-              ink, oil pastel, posca (on the shittest paper imaginable)
-            </p>
-            <p class="foliotext">
-              classwork and other musings ૮ • ﻌ - ა
-            </p>
-        </div>
-      </div>
-    </div>
-  </div>
+                    <img class="divider" src="img/gif/divider2.webp">
+                    
+                    <!-- third print image -->
+                    <div class="row">
+                        <div class="col-1" id="spacer"></div>
+                            <img class="folioImage col-10" src="img/prints/eva2.jpg" alt="placeholder">
+                        <div class="col-1" id="spacer"></div>
+                    </div>
+                    
+                    <p class="foliodescr">
+                    <i>all eye on her</i> <br>
+                    lino
+                    </p>
     
-  </body>
+                    <img class="divider" src="img/gif/divider2.webp">
+                    
+                    <!-- fourth print image -->
+                    <div class="row">
+                        <div class="col-1" id="spacer"></div>
+                            <img class="folioImage col-10" src="img/prints/PXL_20240627_002538009.jpg" alt="placeholder">
+                        <div class="col-1" id="spacer"></div>
+                    </div>
+                    
+                    <p class="foliodescr">
+                    <i>heavenly</i> <br>
+                    monoprint
+                    </p>
+        
+                    <img class="divider" src="img/gif/divider2.webp">
+                    
+                    <!-- fifth print image -->
+                    <div class="row">
+                        <div class="col-1" id="spacer"></div>
+                            <img class="folioImage col-10" src="img/prints/PXL_20240627_002518676.jpg" alt="placeholder">
+                        <div class="col-1" id="spacer"></div>
+                    </div>
+                    
+                    <p class="foliodescr">
+                    <i>shapez</i> <br>
+                    relief print
+                    </p>
+        
+                    <img class="divider" src="img/gif/divider2.webp">
+                    
+                    <!-- sixth print image -->
+                    <div class="row">
+                        <div class="col-1" id="spacer"></div>
+                            <img class="folioImage col-10" src="img/prints/PXL_20240627_030321031.jpg" alt="placeholder">
+                        <div class="col-1" id="spacer"></div>
+                    </div>
+                    
+                    <p class="foliodescr">
+                    <i>ornate lady</i> <br>
+                    lino
+                    </p>
+        
+                    <img class="divider" src="img/gif/divider2.webp">
+                    
+                    <!-- seventh print image -->
+                    <div class="row">
+                        <div class="col-1" id="spacer"></div>
+                            <img class="folioImage col-10" src="img/prints/PXL_20240627_002505385.jpg" alt="placeholder">
+                        <div class="col-1" id="spacer"></div>
+                    </div>
+                    
+                    <p class="foliodescr">
+                    <i>heavenly side b</i> <br>
+                    monoprint, spirit transfer 
+                    </p>
+
+                    <img class="divider" src="img/gif/divider2.webp">
+
+                    <!-- eigth print image -->
+                    <div class="row">
+                        <div class="col-1" id="spacer"></div>
+                            <img class="folioImage col-10" src="img/prints/angel.jpg" alt="placeholder">
+                        <div class="col-1" id="spacer"></div>
+                    </div>
+                    
+                    <p class="foliodescr">
+                    4" x 6" (10cm x 15cm) <br>
+                    <i>angel</i> <br>
+                    drypoint
+                    </p>
+                </div>
+                <div class="portfolio" id="photography">
+                    <!-- first set of photos -->
+                    <div class="row">
+                        <div class="col-1" id="spacer"></div>
+                        <div class="col-10" id="photoSet1">
+                            <img class="folioImage" src="img/photos/12IMG_9528.jpg" alt="placeholder">
+                            
+                            <img class="folioImage" src="img/photos/11IMG_9419.jpg" alt="placeholder">
+                            
+                            <img class="folioImage" src="img/photos/10IMG_9505.jpg" alt="placeholder">
+                        
+                            <img class="folioImage" src="img/photos/9MG_9370.jpg" alt="placeholder">
+                        
+                            <img class="folioImage" src="img/photos/8IMG_9508.jpg" alt="placeholder">
+                            
+                            <img class="folioImage" src="img/photos/7IMG_9473.jpg" alt="placeholder">
+                            
+                            <img class="folioImage" src="img/photos/6IMG_9423.jpg" alt="placeholder">
+                            
+                            <img class="folioImage" src="img/photos/5IMG_9465.jpg" alt="placeholder">
+                            
+                            <img class="folioImage" src="img/photos/4IMG_9365.jpg" alt="placeholder">
+                            
+                            <img class="folioImage" src="img/photos/3IMG_9489.jpg" alt="placeholder">
+                        
+                            <img class="folioImage" src="img/photos/2IMG_9431.jpg" alt="placeholder">
+                            
+                            <img class="folioImage" src="img\photos\1IMG_9511.jpg" alt="placeholder">
+                        </div>
+                        <div class="col-1" id="spacer"></div>
+                        </div>
+                    <p class="foliodescr">
+                        <i>test set 1</i> <br>
+                    </p>
+                    <p class="foliotext">
+                        destruction? or smth?????
+                    </p>
+                    
+        
+                </div>
+                <div class="portfolio" id="sculptures">
+                    <!-- first sculpture image -->
+                    <div class="row">
+                        <div class="col-1" id="spacer"></div>
+                        <img class="folioImage col-10" src="img/sculpture/dickboy.jpg" alt="placeholder">
+                        <div class="col-1" id="spacer"></div>
+                    </div>
+                    <p class="foliodescr">
+                    <i>sad girl</i> <br>
+                    air dry clay
+                    </p>
+                </div>
+                <div class="portfolio" id="traditional">
+                    <!-- first trad image -->
+                    <div class="row">
+                        <div class="col-1" id="spacer"></div>
+                        <img class="folioImage col-10" src="IMG/trad/ink1.jpg" alt="placeholder">
+                        <div class="col-1" id="spacer"></div>
+                    </div>
+
+                    <p class="foliodescr">
+                    16.5" x 23.4" (42cm x 59.4cm) <br>
+                    <i>lying</i> <br>
+                    ink on pre-wetted paper
+                    </p>
+                    
+                    <img class="divider" src="img/gif/divider2.webp">
+                    
+                    <!-- set of trad images 1 -->
+                    <div class="row">
+                        <div class="col-1" id="spacer"></div>
+                        <div class="col-10" id="tradSet1">
+                            <img class="folioImage" src="img/trad/ink2.jpg" alt="placeholder">
+                            <img class="folioImage" src="img/trad/ink3.jpg" alt="placeholder">
+                        </div>
+                        
+                        <div class="col-1" id="spacer"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1" id="spacer"></div>
+                        
+                        <div class="col-1" id="spacer"></div>
+                    </div>
+                    
+                    
+                    <p class="foliodescr">
+                    16.5" x 23.4" (42cm x 59.4cm) <br>
+                    <i>figures!</i> <br>
+                    ink on pre-wetted paper, posca, oil pastel
+                    </p>
+        
+                    <img class="divider" src="img/gif/divider2.webp">
+                    
+                    <!-- set of trad images 2 -->
+                    <div class="row">
+                        <div class="col-1" id="spacer"></div>
+                        <div class="col-10" id="tradSet2">
+                            <img class="folioImage" src="img/trad/CCF_001.jpg" alt="placeholder">
+                            <img class="folioImage" src="img/trad/CCF_002.jpg" alt="placeholder">
+                            <img class="folioImage" src="img/trad/CCF_003.jpg" alt="placeholder">
+                            <img class="folioImage" src="img/trad/CCF_004.jpg" alt="placeholder">
+                            <img class="folioImage" src="img/trad/CCF_005.jpg" alt="placeholder">
+                            <img class="folioImage" src="img/trad/CCF_006.jpg" alt="placeholder">
+                            <img class="folioImage" src="img/trad/CCF_007.jpg" alt="placeholder">
+                            <img class="folioImage" src="img/trad/CCF_008.jpg" alt="placeholder">
+                            <img class="folioImage" src="img/trad/CCF_009.jpg" alt="placeholder">
+                        </div>
+                        <div class="col-1" id="spacer"></div>
+                    </div>
+                    
+        
+                    <p class="foliodescr">
+                    12" x 8.5" (21cm x 29.5cm) <br>
+                    <i>sketchbook dump</i> <br>
+                    ink, oil pastel, posca (on the shittest paper imaginable)
+                    </p>
+                    <p class="foliotext">
+                    classwork and other musings ૮ • ﻌ - ა
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
