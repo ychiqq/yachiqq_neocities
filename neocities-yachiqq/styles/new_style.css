@@ -1,0 +1,89 @@
+/*  this setting makes sure padding and border 
+    are included in the total width and height */
+* {
+    box-sizing: border-box;
+}
+
+/* responsive design columns */
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    /* border: 1px solid red; */
+    width: 100%;
+}
+
+/* make spacers not show on mobile */
+.spacer {
+    display: none;
+}
+
+/* make buttons go in two columns for mobile view */
+button.folioSelect {
+    width: 50%;
+}
+
+img.folioImage {
+    width: 100%;
+    /* margin: auto; */
+}
+
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    button.folioSelect, .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    img.folioImage, .col-10 {width: 83.33%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    .spacer {display:block;}
+}
+
+/*  all columns float left, if we don't do this 
+    they basically ignore each other */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+html {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header {
+    display: flex;
+    color: black;
+    justify-content: center;
+    align-items: flex-start;
+    height: auto;
+}
+
+.portboxHolder {
+    background-image: linear-gradient(#ffb4da,#c0ebff);
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px 0px rgba(255, 104, 197, 0.801);
+    float: none;
+    margin: auto;
+}
+
+.portfolio {
+    display: none;
+}
+
+/* center this div ! */
+div.folioSelect {
+    float: none;
+    margin: auto;
+}
+
+.divider {
+    width: 100%;
+    margin: auto;
+}

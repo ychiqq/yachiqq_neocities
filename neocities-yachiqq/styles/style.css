@@ -26,7 +26,7 @@ body {
   background-color: white;
   position: relative;
   color: black;
-  font-family: Verdana;
+  font-family: Miracode;
   background-image: url(https://64.media.tumblr.com/6beb87be611be2c9ae13adea98cc37b4/7cf915f60095705b-cd/s75x75_c1/0c1f522b13c9d503f8339773784b417b70d8989b.gifv);
 }
 
@@ -34,37 +34,7 @@ p {
   font-family: "Miracode";
   font-size: small;
 }
-div.box {
-  width: auto;
 
-  border: 8px solid rgb(255, 165, 192);
-  border-radius: 20px;
-  height: 50em;
-  max-width: 80em;
-  background-color: #fdc4d7;
-  box-shadow: 0px 0px 35px 20px rgba(255, 255, 255, 0.678);
-  margin: auto;
-  margin-top: 100px;
-}
-
-div.profile {
-  color: aquamarine;
-  border-right: 8px solid rgb(255, 165, 192);
-  height: calc(100% - 40px);
-  width: 15%;
-  float: left;
-  display: flex;
-  flex-direction: column;
-  word-wrap: break-word;
-  padding: 3px;
-}
-
-div.header {
-  border-bottom: 8px solid rgb(255, 165, 192);
-  float: top;
-  padding: 5px;
-  background-image: linear-gradient(rgb(255,165,192), rgba(255, 255, 255, 0.596));
-}
 
 img {
   max-width: 100%;
@@ -91,6 +61,26 @@ img {
 
 }
 
+div#titleDiv {
+  position: relative;
+  z-index: 2;
+  height: 20px;
+}
+
+h1#title {
+  align-self: auto;
+  text-align: center;
+  margin-top: 0px;
+  /* transform: translateY(10px); */
+  z-index: 1;
+  font-family: 'Cloick';
+  /* z-index: auto; */
+  color: rgb(255, 255, 255);
+  font-size: clamp(2rem, 1.13rem + 4.348vw, 4.5rem);
+  padding: 0px;
+}
+
+
 div.imgenter {
 max-width: 100%;
 animation-name: enter;
@@ -106,6 +96,7 @@ div.center {
   width: 50%;
 }
 
+/* styling for the index page enter button */
 a.buttonenter {
   border-radius: 3px;
   color: #000000;
@@ -126,30 +117,9 @@ a.buttonenter:hover {
   color: #c0e3ff;
 }
 
-
-
-a.button {
-  background-color: #bdb6ff;
-  border-radius: 6px;
-  border: 2px solid rgb(106, 115, 248); 
-  color: #ffffff;
-  font-weight: bold;
-  text-decoration: none;
-  text-align: center;
-  padding: 3px;
-  display: block;
-  font-size: small;
-  max-width: fit-content;
-}
-
-a.button:hover {
-  background-color: #1989f1;
-  border: 2px solid #c7e4ff;
-  color: #c0e3ff;
-}
-
 .portfolio {
   display: none;
+  max-width: 1000px;
 }
 
 div#portbox {
@@ -287,19 +257,7 @@ button#homepageLink {
 img.folioImage {
   padding-bottom: 5px;
 }
-h1#title {
-  align-self: auto;
-  text-align: center;
-  margin-top: 0px;
-  transform: translateY(130px);
-  z-index: 1;
-  position: relative;
-  font-family: 'Cloick';
-  /* z-index: auto; */
-  color: rgb(255, 255, 255);
-  font-size: 102px;
-  padding: 0px;
-}
+
 /* 
 div#title {
   z-index: 3;
