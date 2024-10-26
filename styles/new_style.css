@@ -1,3 +1,10 @@
+@font-face {
+    font-family: Miracode;
+    src:  url('../fonts/Miracode/Miracode.eot'),
+          url('../fonts/Miracode/Miracode.ttf') format('truetype'),
+          url('../fonts/Miracode/Miracode.woff') format('woff');
+}
+
 /*  this setting makes sure padding and border 
     are included in the total width and height */
 * {
@@ -17,9 +24,14 @@
     display: none;
 }
 
-/* make buttons go in two columns for mobile view */
 button.folioSelect {
+    /* make buttons go in two columns for mobile view */
     width: 50%;
+}
+
+#title {
+    font-size: 50px;
+    transform: translateY(-10px);
 }
 
 img.folioImage {
@@ -27,22 +39,32 @@ img.folioImage {
     /* margin: auto; */
 }
 
-@media only screen and (min-width: 768px) {
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    button.folioSelect, .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
+@media only screen and (min-width: 700px) {
+    /* tablet view */
+    button.folioSelect {width: 33%;}
+    #title {font-size: 72px;
+        transform: translateY(-40px);}
+}
+
+@media only screen and (min-width: 1200px) {
+    /* pc view */
+    /* the !important overrides any other class defs */
+    .col-1 {width: 8.33% !important;}
+    .col-2 {width: 16.66% !important;}
+    .col-3 {width: 25% !important;}
     .col-4 {width: 33.33%;}
     .col-5 {width: 41.66%;}
     .col-6 {width: 50%;}
     .col-7 {width: 58.33%;}
     .col-8 {width: 66.66%;}
-    img.folioImage, .col-10 {width: 83.33%;}
     .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
+    .col-10 {width: 83.33% !important;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
     .spacer {display:block;}
+    #title {font-size: 72px;
+            transform: translateY(-40px);}
+    
 }
 
 /*  all columns float left, if we don't do this 
@@ -54,7 +76,7 @@ img.folioImage {
 }
 
 html {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Miracode;
 }
 
 .header {
@@ -62,8 +84,9 @@ html {
     color: black;
     justify-content: center;
     align-items: flex-start;
-    height: auto;
+    height: 50px;
 }
+
 
 .portboxHolder {
     background-image: linear-gradient(#ffb4da,#c0ebff);
@@ -71,19 +94,37 @@ html {
     box-shadow: 0px 0px 30px 0px rgba(255, 104, 197, 0.801);
     float: none;
     margin: auto;
+    padding-top: 100px
 }
-
+/* center this div ! */
+div.folioSelect {
+    justify-content: center;
+}
+button.folioSelect {
+    color: black;
+    border-radius: 3px;
+    border: 1px solid #a72a64;
+    background-image: linear-gradient(#ff63d0,#ca349d,#bfa9d1);
+    font-family: Miracode;
+}
+button.folioSelect:hover {
+    background-image: linear-gradient(#ffb8ea,#c569a9,#d2c8da);
+    color: #c0e3ff;
+}
+  button.folioSelect:active {
+    background-image: linear-gradient(#ffb8ea,#a1578b,#a69eac);
+    color: #FFFFFF;
+}
 .portfolio {
     display: none;
 }
 
-/* center this div ! */
-div.folioSelect {
-    float: none;
-    margin: auto;
-}
 
 .divider {
     width: 70%;
     margin: auto;
+}
+
+.foliodescr {
+    text-align: right;
 }
