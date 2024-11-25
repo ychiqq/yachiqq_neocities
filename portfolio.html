@@ -6,7 +6,7 @@
         <link href="styles/new_style.css" rel="stylesheet" type="text/css" media="all">
         <link href="img/gif/pfp1.gif" rel="icon" type="img/gif">
         <script type="text/javascript" src="scripts/open_folio.js"></script>
-        <title>new yachiqq portfolio</title>
+        <title>portfolio - yachiqq portfolio</title>
     </head>
     <body>
         <div class="header">
@@ -15,6 +15,13 @@
         <div class="row portboxHolder col-6">
         <!-- buttons to select which part of folio to view 
                 these change based on screen width -->
+            <div class="row">
+                <div class="col-5"></div>
+                <button class="folioSelect col-2" id="homepageLink" onclick="location.href='/about.html'">about me</button>
+                <div class="col-5"></div>
+            </div>
+            <br>
+            
             <div class="row folioSelect">
                 <button class="folioSelect col-2" id="homepageLink" onclick="location.href='/index.html'">home</button>
                 <button class="folioSelect col-2" id="digitalSelect" onclick="openFolio('digital')">digital</button>
