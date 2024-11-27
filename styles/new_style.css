@@ -94,6 +94,8 @@ html {
     overflow-y: scroll;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    position: relative;
+    min-height:100%
 }
 
 html::-webkit-scrollbar { /* WebKit */
@@ -110,6 +112,16 @@ body {
     justify-content: center;
     align-items: flex-start;
     height: 50px;
+}
+
+footer {
+    text-align:center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
 }
 
 
