@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>home</title>
+        <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link href="styles/style.css" rel="stylesheet" type="text/css" media="all">    
+        <link href="img/gif/eye-rev.gif" rel="preload" as="image"
+    </head>
+    <body>
+        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+        
+        
+        <model-viewer id="door" src="img/door.glb" animation-name="DOOROPEN" camera-orbit="180deg 75deg 105%" onclick="openDoor()" finished=""></model-viewer>
+        <img id="eye" class="pixel-perfect" src="img/gif/eye.gif" style="display: none; position: fixed; top: 65%; left: 50%; transform: translate(-50%,-50%); width: 438px; animation: enter 2s ease-in-out; animation-iteration-count: infinite;">
+        <model-viewer id="teatime" src="img/teatime.glb" camera-orbit="180deg 75deg 105%"></model-viewer>
+        <script>
+            function openDoor() {
+                var doormodel = document.getElementById("door")
+                doormodel.play({repetitions: 1, pingpong: false})
+                doormodel.addEventListener('finished', function (e) {
+                    $("#eye").fadeIn(1000, function (e) {
+                       $("#door").delay(2000).fadeOut(1000, function (e){
+                            document.getElementById("eye").src="img/gif/eye-rev.gif"
+                       })
+                    })
+                })
+            }
+        </script>
+        
+    </body>
+</html>
